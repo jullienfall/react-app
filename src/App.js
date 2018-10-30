@@ -1,39 +1,27 @@
 import React, { Component } from 'react';
-import './App.css';
-
-class Button extends Component {
-  handleClick = () => {
-    this.props.onClickFunction(this.props.incrementValue);
-  };
-
-  render() {
-    return <button onClick={this.handleClick}>+{this.props.incrementValue}</button>;
-  }
-}
-
-const Result = (props) => {
-  return <div>{props.counter}</div>;
-};
+import Form from './form';
+import CardList from './card-list';
 
 class App extends Component {
-  state = { counter: 0 };
-
-  incrementCounter = (incrementValue) => {
-    this.setState((prevState) => ({
-      counter: prevState.counter + incrementValue
+  constructor(props){
+    super(props);
+    this.state = {
+      cards: []
+    }
+  }
+  addNewCard = (cardInfo) => {
+    this.setState(prevState => ({
+      cards: prevState.cards.concat(cardInfo)
     }));
-  };
-
+  }
   render() {
     return (
       <div>
-        <Button incrementValue={1} onClickFunction={this.incrementCounter} />
-        <Button incrementValue={5} onClickFunction={this.incrementCounter} />
-        <Button incrementValue={10} onClickFunction={this.incrementCounter} />
-        <Button incrementValue={100} onClickFunction={this.incrementCounter} />
-        <Result counter={this.state.counter} />
+        <Form onSubmit={this.addNewCard} />
+        <CardList cards={this.state.cards} />
       </div>
-    );
+    )
   }
 }
+
 export default App;

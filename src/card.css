@@ -1,0 +1,13 @@
+.card-container {
+  margin: 1rem;
+}
+
+.card-container__content {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.card-container__content--name {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
