@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import Form from './form';
-import CardList from './card-list';
+
+import Form from './cards/form';
+import CardList from './cards/card-list';
+import Game from './game/js/game';
 
 class App extends Component {
   constructor(props){
@@ -19,6 +21,7 @@ class App extends Component {
       <div>
         <Form onSubmit={this.addNewCard} />
         <CardList cards={this.state.cards} />
+        <Game />
       </div>
     )
   }

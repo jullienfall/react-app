@@ -1,0 +1,9 @@
+span {
+  display: inline-block;
+  margin: .5rem;
+  text-align: center;
+  background-color: #ccc;
+  width: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
