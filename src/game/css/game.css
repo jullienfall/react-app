@@ -7,3 +7,20 @@ span {
   border-radius: 50%;
   cursor: pointer;
 }
+
+svg {
+  margin: .5rem;
+  font-size: 1.5rem;
+}
+
+.selected {
+  background-color: #eee;
+  color: #ddd;
+  cursor: not-allowed;
+}
+
+.used {
+  background-color: #ada;
+  color: #9b9;
+  cursor: not-allowed;
+}

@@ -13,7 +13,7 @@ class Form extends Component {
   };
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className="container">
         <input type="text"
           value={this.state.userName}
           onChange={(event) => this.setState({ userName: event.target.value })} 

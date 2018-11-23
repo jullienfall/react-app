@@ -11,3 +11,7 @@
   font-weight: bold;
   font-size: 1.25rem;
 }
+
+form {
+  margin: 2rem 0;
+}
