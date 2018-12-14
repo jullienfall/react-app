@@ -6,9 +6,16 @@ span {
   width: 1.5rem;
   border-radius: 50%;
   cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  line-height: 2rem;
 }
 
-svg {
+button {
+  margin: 1rem;
+}
+
+.container svg {
   margin: .5rem;
   font-size: 1.5rem;
 }

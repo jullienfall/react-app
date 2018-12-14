@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-const _ = require('lodash');
+import _ from 'lodash';
 
 const Stars = (props) => {
   return (

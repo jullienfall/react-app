@@ -1,8 +1,11 @@
 import React from 'react';
-const _ = require('lodash');
+import _ from 'lodash';
 
 const Numbers = (props) => {
   const numberClassName = (number) => {
+    if (props.usedNumbers.indexOf(number) >= 0) {
+      return 'used';
+    }
     if (props.selectedNumbers.indexOf(number) >= 0) {
       return 'selected';
     }
@@ -12,7 +15,7 @@ const Numbers = (props) => {
     <div className="card">
       <div className="row justify-content-center">
         {Numbers.list.map(number => (
-          <span className={numberClassName(number)} key={number} 
+          <span className={numberClassName(number)} key={number}
             onClick={() => props.selectNumber(number)}>{number}
           </span>
         ))}
